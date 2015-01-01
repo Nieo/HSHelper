@@ -28,9 +28,6 @@ class Overlay(object):
 			
 
 
-		#Needs logic
-
-
 
 class LabelFrame(tk.Frame):
 	"""Frames for text and values to use in Overlay"""
