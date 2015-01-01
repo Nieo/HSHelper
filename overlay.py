@@ -3,7 +3,7 @@ import tkinter as tk
 class Overlay(object):
 	"""A window that is always on top"""
 
-	def __init__(self, root):
+	def __init__(self, root, labeltext="Overlay"):
 		Overlay = tk.Toplevel(root)
 		#Overlay.overrideredirect(1)
 		#this does not work as it should
@@ -11,7 +11,7 @@ class Overlay(object):
 		self.Frame = tk.Frame(Overlay)
 		self.Frame.config(bg="black")
 		self.Frame.pack()
-		self.header = tk.Label(self.Frame, text="Overlay")
+		self.header = tk.Label(self.Frame, text=labeltext)
 		self.header.pack()
 		
 		self.labels = {}

@@ -3,7 +3,7 @@
 import sqlite3 as lite
 import json
 
-def createdatabase(databasename, cardset):
+def createDatabase(databasename, cardset):
 
 	cardfile = open(cardset)
 	cards = json.loads(cardfile.read())
@@ -113,5 +113,5 @@ def createdatabase(databasename, cardset):
 if __name__ == '__main__':
 	dbname = "Hearthstone.db"
 	jsonfile = "AllSets.enUS.json"	
-	createdatabase(dbname,jsonfile)
+	createDatabase(dbname,jsonfile)
 
