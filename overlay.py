@@ -13,7 +13,7 @@ class Overlay(object):
 		self.Frame.pack()
 		self.header = tk.Label(self.Frame, text=labeltext)
 		self.header.pack()
-		
+
 		self.labels = {}
 
 	def addLabel(self, cardId, cardName):
@@ -25,8 +25,12 @@ class Overlay(object):
 			aLabel = LabelFrame(self.Frame,cardName)
 			self.labels[cardId] = aLabel
 			aLabel.pack()
-			
-
+	
+	def clear(self):
+		for elem in self.labels:
+			self.labels[elem].pack_forget()
+			self.labels[elem].destroy()
+		self.labels = {}
 
 
 class LabelFrame(tk.Frame):

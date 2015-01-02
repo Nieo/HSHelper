@@ -30,7 +30,7 @@ class LogReader(object):
 
 	def readLog(self):
 		
-		while self.keepreading:
+		while True:
 			self.where = self.file.tell()
 			line = self.file.readline()
 			if not line:
@@ -54,18 +54,6 @@ class LogEntry(object):
 
 	def __str__(self):
 		return "entityid={0}, cardid={1}, var1={2}, var2={3}".format(self.entityid, self.cardid, self.var1, self.var2)
-	
-	def getentityid():
-		return self.entityid
-
-	def getcardid():
-		return self.cardid
-
-	def getvar1():
-		return self.var1
-
-	def getvar2():
-		return self.var2
 
 
 if __name__ == '__main__':
@@ -73,9 +61,9 @@ if __name__ == '__main__':
 	print("Started")
 	time.sleep(1)
 	print(lr.getLogEntry())
-	lr.stopReading()
+	
 	print(lr.getLogEntry())
-
+	time.sleep(10)
 
 
 
