@@ -92,7 +92,6 @@ def createDatabase(databasename, cardset):
 		createdecksquery = """CREATE TABLE decks(
 			id INTEGER PRIMARY KEY,
 			name TEXT,
-			class TEXT,
 			wins INT NOT NULL,
 			losses INT NOT NULL
 			);"""		

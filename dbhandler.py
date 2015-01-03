@@ -21,14 +21,23 @@ class DatabaseHandler():
 		except sqlite3.Error as err:
 			print("sqlite3.Error : {0}".format(err))
 
-	def addDeck(self, name, hero):
+	def addDeck(self, name):
 		try: 
-			query = "INSERT INTO decks (name, class, wins, losses)VALUES('{0}','{1}',0,0);".format(name,hero)
+			query = "INSERT INTO decks (name, wins, losses)VALUES('{0}',0,0);".format(name)
 			self.cursor.execute(query)
 			self.db.commit()
 		except sqlite3.Error as err:
 			print("sqlite3.Error : {0}".format(err))
 	
+	def getDecks(self):
+		try:
+			query = "SELECT * FROM decks;"
+			self.cursor.execute(query)
+			self.db.commit()
+			return self.cursor.fetchall()
+		except sqlite3.Error as err:
+			print("sqlite3.Error : {0]".format(err))
+
 	def getDeckData(self, id):
 		try:
 			query = "SELECT name,wins,losses FROM decks WHERE id={0};".format(id)
