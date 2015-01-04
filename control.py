@@ -1,35 +1,49 @@
-import overlay, dbhandler, logreader, time
+import overlay, dbhandler, logreader, window, time
 import tkinter as tk
 import threading as th
 
-filepath = '/Users/Nieo/Library/Logs/Unity/Player.log'
-#filepath = '/Users/Nieo/Documents/python/Logging/TestLog/Player1.log'
-root = tk.Tk() #This should be something usefull instead
-ol = overlay.Overlay(root, "opponent plays")
-lr = logreader.LogReader(filepath)
 
 
-def updateGUI():
-	global ol
-	global lr
-	db = dbhandler.DatabaseHandler()
-	while True:
-		time.sleep(0.01)
-		info = lr.getLogEntry()
+class control(object):
+	"""docstring for control"""
+
+
+	def __init__(self):
+		super(control, self).__init__()
+		
+		self.filepath = '/Users/Nieo/Library/Logs/Unity/Player.log'
+
+		self.db = dbhandler.DatabaseHandler()
+		self.lr = logreader.LogReader(self.filepath)
+		self.root = window.Window(self.windowCommand)
+		self.ol = overlay.Overlay(self.root, "opponent plays")
+
+
+		self.root.after(100,self.updateGUI)
+		self.root.mainloop()
+
+	def windowCommand(self,command, data=None):
+		print(command + " : " + str(data))
+		if "clear" in command:
+			self.ol.clear()
+		if "adddeck" in command:
+			self.db.addDeck(data)
+
+	def updateGUI(self):
+		db = dbhandler.DatabaseHandler()
+		info = self.lr.getLogEntry()
+		#print(info)
 		if info:
-			print(info)
 			if "OPPOSING HAND" in info.var1:
-				ol.addLabel(info.cardid, db.getCardName(info.cardid))
+				self.ol.addLabel(info.cardid, db.getCardName(info.cardid))
 
 			if "Hero" in info.var1 and "GRAVEYARD" in info.var2:
-				ol.clear()
-		
+				self.ol.clear()
+		self.root.after(10,self.updateGUI)
 
 
-controlthread = th.Thread(target=updateGUI, args=())
-controlthread.daemon = True
-controlthread.start()
-root.mainloop()
 
+if __name__ == '__main__':
+	a = control()
 
 

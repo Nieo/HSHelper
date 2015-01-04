@@ -8,9 +8,10 @@ class Overlay(object):
 		#Overlay.overrideredirect(1)
 		#this does not work as it should
 		Overlay.wm_attributes("-topmost", 1)
-		self.Frame = tk.Frame(Overlay)
-		self.Frame.config(bg="black")
+		
+		self.Frame = tk.Frame(Overlay, width=160, height=700)
 		self.Frame.pack()
+		self.Frame.pack_propagate(0)
 		self.header = tk.Label(self.Frame, text=labeltext)
 		self.header.pack()
 
@@ -38,12 +39,13 @@ class LabelFrame(tk.Frame):
 
 	def __init__(self, parent,cardName):
 		tk.Frame.__init__(self,parent)
-		self.config(bd=0, width=100, bg="yellow")
+		self.config(bd=0, width=160, height=15)
 		self.pack()
+		self.pack_propagate(0)
 		self.amount = tk.StringVar()
 		self.amount.set(1)
-		self.nameLabel = tk.Label(self, text=cardName, bg='red')
-		self.amountLabel = tk.Label(self, textvariable=self.amount, bg='teal')
+		self.nameLabel = tk.Label(self, text=cardName)
+		self.amountLabel = tk.Label(self, textvariable=self.amount)
 		
 		self.nameLabel.pack(side=tk.LEFT)
 		self.amountLabel.pack(side=tk.RIGHT)

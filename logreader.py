@@ -34,14 +34,13 @@ class LogReader(object):
 			self.where = self.file.tell()
 			line = self.file.readline()
 			if not line:
-				time.sleep(0.01)
+				time.sleep(0.1)
 				self.file.seek(self.where)
 			else:
 				anything = self.action.findall(line)
 				if anything != []:
 					with th.Lock():
 						self.queue.put(LogEntry(anything[0][0], anything[0][1], anything[0][2], anything[0][3]), block=False)
-
 
 class LogEntry(object):
 	"""docstring for logentry"""
