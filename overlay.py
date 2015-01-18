@@ -1,65 +1,39 @@
-import tkinter as tk
 
-class Overlay(object):
-	"""A window that is always on top"""
+from PyQt5.QtWidgets import QDialog, QLabel, QTableView
+from PyQt5 import QtCore
+from PyQt5.QtGui import QStandardItemModel, QStandardItem
+from UI.overlayDialog import Ui_Dialog
 
-	def __init__(self, root, labeltext="Overlay"):
-		Overlay = tk.Toplevel(root)
-		#Overlay.overrideredirect(1)
-		#this does not work as it should
-		Overlay.wm_attributes("-topmost", 1)
+class Overlay(QDialog,Ui_Dialog):
+	"""docstring for Overlay"""
+	def __init__(self):
+		super(Overlay, self).__init__()
+		self.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint)
+		self.move(10,10)
+		self.setupUi(self)
 		
-		self.Frame = tk.Frame(Overlay, width=160, height=700)
-		self.Frame.pack()
-		self.Frame.pack_propagate(0)
-		self.header = tk.Label(self.Frame, text=labeltext)
-		self.header.pack()
+		self.values = {}
+		self.cards = QStandardItemModel()
+		self.tableView.setModel(self.cards)
+		self.size = 0
 
-		self.labels = {}
 
-	def addLabel(self, cardId, cardName):
-		aLabel = None
-		try:
-			aLabel = self.labels[cardId]
-			aLabel.incAmount()
-		except KeyError:
-			aLabel = LabelFrame(self.Frame,cardName)
-			self.labels[cardId] = aLabel
-			aLabel.pack()
-	
+	@QtCore.pyqtSlot(str)
+	def addCard(self, name):
+		if name not in self.values:
+			self.cards.setItem(self.size, 0,QStandardItem(name))
+			self.values[name] = QStandardItem('1')
+			self.cards.setItem(self.size, 1, self.values[name])
+			self.size += 1
+			self.tableView.resizeColumnsToContents()
+			self.tableView.resize(180,self.tableView.rowHeight(0)* self.size)
+			self.adjustSize()
+		else:
+			self.values[name].setText(str(int(self.values[name].text()) + 1))
+
 	def clear(self):
-		for elem in self.labels:
-			self.labels[elem].pack_forget()
-			self.labels[elem].destroy()
-		self.labels = {}
-
-
-class LabelFrame(tk.Frame):
-	"""Frames for text and values to use in Overlay"""
-
-	def __init__(self, parent,cardName):
-		tk.Frame.__init__(self,parent)
-		self.config(bd=0, width=160, height=15)
-		self.pack()
-		self.pack_propagate(0)
-		self.amount = tk.StringVar()
-		self.amount.set(1)
-		self.nameLabel = tk.Label(self, text=cardName)
-		self.amountLabel = tk.Label(self, textvariable=self.amount)
-		
-		self.nameLabel.pack(side=tk.LEFT)
-		self.amountLabel.pack(side=tk.RIGHT)
-
-	def incAmount(self):
-		self.amount.set(int(self.amount.get()) + 1)
-
-
-if __name__ == '__main__':
-    root = tk.Tk()
-    App = Overlay(root)
-    App.addLabel("ID", "NAMe")
-    App.addLabel("ID2", "akljfgl")
-    App.addLabel("ID2", "Guardian of kings")
-    App.addLabel("ID4", "NAMe")
-    App.labels['ID'].incAmount()
-    root.mainloop()
+		self.cards.clear()
+		self.size = 0
+		self.values = {}
+		self.tableView.resize(160, 1)
+		self.adjustSize()

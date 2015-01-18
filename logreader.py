@@ -1,71 +1,32 @@
-import threading as th
-import re, time 
-import queue as qu
+from PyQt5.QtCore import QObject, QThread, pyqtSignal, pyqtSlot, QTimer
+import re 
 
-
-
-class LogReader(object):
+class LogReader(QObject):
 	"""docstring for LogReader"""
-	def __init__(self, location):
-		super(LogReader, self).__init__()
-		self.file = open(location, 'r')
-		self.action = re.compile(' id=(\d+)[^\[]*cardId=(\w+).*zone from(.*)->(.*)')
-		self.queue = qu.Queue()
-		self.keepreading = True
-		self.readthread = th.Thread(target=self.readLog, args=())
-		self.readthread.daemon = True
-		self.readthread.start()
+	logUpdate = pyqtSignal(str, tuple)
+	
+	def __init__(self, logfile):
+		super(QObject, self).__init__()
+		self.logfile = open(logfile, 'r')
+		self.zoneChange = re.compile(' id=(\d+)[^\[]*cardId=(\w+).*zone from(.*)-> (.*)')
 
-	def getLogEntry(self):
-		entry = None
-		try: 
-			with th.Lock():
-				entry = self.queue.get(block=False)
-		except qu.Empty:
-			pass
-		return entry
-
-	def stopReading(self):
-		self.keepreading = False
-
+	@pyqtSlot()
 	def readLog(self):
 		
-		while True:
-			self.where = self.file.tell()
-			line = self.file.readline()
-			if not line:
-				time.sleep(0.1)
-				self.file.seek(self.where)
-			else:
-				anything = self.action.findall(line)
-				if anything != []:
-					with th.Lock():
-						self.queue.put(LogEntry(anything[0][0], anything[0][1], anything[0][2], anything[0][3]), block=False)
+		self.where = self.logfile.tell()
+		line = self.logfile.readline()
+		if line:
+			zone = self.zoneChange.findall(line)
 
-class LogEntry(object):
-	"""docstring for logentry"""
-	def __init__(self, entityid, cardid, var1=None, var2=None):
-		super(LogEntry, self).__init__()	
-		self.entityid = entityid
-		self.cardid = cardid
-		self.var1 = var1
-		self.var2 = var2
+			if zone != []:
+				self.logUpdate.emit('zone', zone[0])
+		else:
+			self.logfile.seek(self.where)
+		
 
-	def __str__(self):
-		return "entityid={0}, cardid={1}, var1={2}, var2={3}".format(self.entityid, self.cardid, self.var1, self.var2)
-
-
-if __name__ == '__main__':
-	lr = LogReader('/Users/Nieo/Documents/python/Logging/TestLog/Player1.log')
-	print("Started")
-	time.sleep(1)
-	print(lr.getLogEntry())
-	
-	print(lr.getLogEntry())
-	time.sleep(10)
-
-
-
-
-
-
+	def start(self):
+		print("Called start")
+		self.timer = QTimer()
+		self.timer.setSingleShot(False)
+		self.timer.timeout.connect(self.readLog)
+		self.timer.start(0.1)
