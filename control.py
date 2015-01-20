@@ -17,7 +17,7 @@ class Control(QObject):
 		self.app = QApplication(sys.argv)
 		self.mainWindow = MainWindow(self.callback)
 		self.mainWindow.show()
-		self.filepath = 'Player.log'#/Users/Nieo/Library/Logs/Unity/Player.log'
+		self.filepath = '/Users/Nieo/Library/Logs/Unity/Player.log'
 		self.logreader = LogReader(self.filepath)
 		self.logreader.logUpdate.connect(self.handleLogUpdate)
 
@@ -28,7 +28,8 @@ class Control(QObject):
 
 		self.currentGame = Game()
 
-		self.foundHeroes = 0
+		self.playerName = 'Nieo'
+
 
 		self.overlay = Overlay()
 		self.overlay.show()
@@ -46,21 +47,24 @@ class Control(QObject):
 	@pyqtSlot(str, tuple)
 	def handleLogUpdate(self, type, data):
 		if type == "zone":
-			if "Hero" in data[2]:
-				logging.debug(data)
-				logging.info("Game over")
-			elif "(Hero)" in data[3]:
-				if self.foundHeroes == 1:
-					logging.info("New game starting")
-					self.overlay.clear()
-					self.currentGame = Game()
-					self.currentGame.updateOpponentPlay.connect(self.overlay.addCard)
-
-				self.foundHeroes = (1+self.foundHeroes)%2
-			
-				
-			elif data[3] == "OPPOSING PLAY":
+			if data[2] == "OPPOSING HAND":
 				self.currentGame.opponentPlay(data[1]) 
+			else:
+				pass
+				#logging.debug(data)
+		elif type == "playState":
+			logging.debug(data)
+			if data[1] == 'PLAYING' and data[0] == self.playerName:
+				logging.info("New game starting")
+				self.overlay.clear()
+				self.currentGame = Game()
+				self.currentGame.updateOpponentPlay.connect(self.overlay.addCard)
+
+			elif data[1] == 'WON':
+				if data[0] == self.playerName:
+					logging.info("You have won")
+				else:
+					logging.info("You have lost")
 
 
 if __name__ == '__main__':

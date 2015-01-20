@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Enemey Draw</string>
+   <string>Enemey Played</string>
   </property>
   <widget class="QTableView" name="tableView">
    <property name="geometry">

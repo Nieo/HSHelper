@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'UI/overlayDialog.ui'
 #
-# Created: Tue Jan 13 11:13:54 2015
+# Created: Tue Jan 20 16:08:23 2015
 #      by: PyQt5 UI code generator 5.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -31,12 +31,12 @@ class Ui_Dialog(object):
         self.tableView.setObjectName("tableView")
         self.tableView.horizontalHeader().setVisible(False)
         self.tableView.verticalHeader().setVisible(False)
-        self.tableView.verticalHeader().setStretchLastSection(True)
+        self.tableView.verticalHeader().setStretchLastSection(False)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Enemey Draw"))
+        Dialog.setWindowTitle(_translate("Dialog", "Enemey Played"))
 
