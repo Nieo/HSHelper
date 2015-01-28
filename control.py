@@ -15,7 +15,7 @@ class Control(QObject):
 	def __init__(self):
 		super(Control, self).__init__()
 		self.app = QApplication(sys.argv)
-		self.mainWindow = MainWindow(self.callback)
+		self.mainWindow = MainWindow()
 		self.mainWindow.show()
 		self.filepath = '/Users/Nieo/Library/Logs/Unity/Player.log'
 		self.logreader = LogReader(self.filepath)
@@ -36,13 +36,6 @@ class Control(QObject):
 
 		sys.exit(self.app.exec_())
 		
-
-	def callback(self, data):
-		if data == 'displayEnemyDraw':
-			pass
-	
-		if data == "test":
-			pass
 	
 	@pyqtSlot(str, tuple)
 	def handleLogUpdate(self, type, data):
