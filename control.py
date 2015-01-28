@@ -6,6 +6,7 @@ from mainwindow import MainWindow
 from overlay import Overlay
 from logreader import LogReader
 from Database.dbhandler import DatabaseHandler
+from deck import Deck
 class Control(QObject):
 	"""Main controler"""
 	
@@ -17,7 +18,7 @@ class Control(QObject):
 		self.app = QApplication(sys.argv)
 		self.mainWindow = MainWindow()
 		self.mainWindow.show()
-		self.filepath = '/Users/Nieo/Library/Logs/Unity/Player.log'
+		self.filepath = 'D:\Games\Battlenet\Hearthstone\Hearthstone_Data\output_log.txt'
 		self.logreader = LogReader(self.filepath)
 		self.logreader.logUpdate.connect(self.handleLogUpdate)
 
@@ -25,12 +26,18 @@ class Control(QObject):
 		self.updateThread.started.connect(self.logreader.start)
 		self.updateThread.start()
 		self.logreader.moveToThread(self.updateThread)		
-
+		self.database = DatabaseHandler()
 		self.currentGame = Game()
 
 		self.playerName = 'Nieo'
-
-
+		
+		self.decks = []
+		tmp = self.database.getDecks()
+		for i in tmp:
+			self.decks.append(Deck(i[1],i[2],i[3]))
+		
+		self.mainWindow.showDecks(self.decks)
+		
 		self.overlay = Overlay()
 		self.overlay.show()
 
