@@ -3,6 +3,8 @@
 import sqlite3 as lite
 import json
 
+#create table cardsInDeck(cardid TEXT, deckid INT, numberof INT, wins INT, losses INT, indeck INT,FOREIGN KEY(cardid) REFERENCES cards(id),FOREIGN KEY(deckid) REFERENCES decks(id), PRIMARY KEY(cardid, deckid, numberof));
+
 def createDatabase(databasename, cardset):
 
 	cardfile = open(cardset)
@@ -11,8 +13,7 @@ def createDatabase(databasename, cardset):
 	try:
 		db = lite.connect(databasename)
 		cursor = db.cursor()
-		cursor.execute("DROP TABLE IF EXISTS cards;")
-		createcardsquery = """CREATE TABLE cards(
+		createcardsquery = """CREATE TABLE IF NOT EXISTS cards(
 			name TEXT,
 			cost INT,
 			type TEXT,
@@ -90,10 +91,9 @@ def createDatabase(databasename, cardset):
 		
 		cursor.execute("DROP TABLE IF EXISTS decks")
 		createdecksquery = """CREATE TABLE decks(
-			id INTEGER PRIMARY KEY,
-			name TEXT,
-			wins INT NOT NULL,
-			losses INT NOT NULL
+			name TEXT PRIMARY KEY,
+			wins INT DEFAULT 0 NOT NULL,
+			losses INT DEFAULT 0 NOT NULL
 			);"""		
 		print("Executing: " + createdecksquery)
 		cursor.execute(createdecksquery)

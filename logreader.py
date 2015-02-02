@@ -10,6 +10,7 @@ class LogReader(QObject):
 		self.logfile = open(logfile, 'r')
 		self.zoneChange = re.compile(' id=(\d+)[^\[]*cardId=(\w+).*zone from (.*) -> (.*)')
 		self.playState = re.compile('TAG_CHANGE Entity=(\w+).*tag=PLAYSTATE value=(\w+)')
+	
 	@pyqtSlot()
 	def readLog(self):
 		

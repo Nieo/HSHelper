@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'UI\MainWindow.ui'
+# Form implementation generated from reading ui file 'UI/MainWindow.ui'
 #
-# Created: Wed Jan 28 23:21:46 2015
+# Created: Mon Feb  2 21:53:15 2015
 #      by: PyQt5 UI code generator 5.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,11 +12,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1104, 914)
+        MainWindow.resize(1000, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
-        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 1021, 681))
+        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 1000, 600))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)

@@ -1,4 +1,4 @@
-import sqlite3, logging 
+import sqlite3, logging
 
 class DatabaseHandler():
 	"""Handles the hearthstone database"""
@@ -12,12 +12,19 @@ class DatabaseHandler():
 		except sqlite3.Error as err:
 			logging.warning("sqlite3.Error : {0}".format(err))
 
+	def runQuery(self, query):
+		try:
+			self.cursor.execute(query)
+			self.db.commit()
+		except sqlite3.Error as err:
+			logging.warning("sqlite3.Error : {0}".format(err))
+
 	def getCardName(self, cardId):
 		logging.debug("called DatabaseHandler.getCardName")
 		try:
 			query = "SELECT name FROM cards WHERE id=\'" + cardId + "\';"
 			self.cursor.execute(query)
-			
+
 			name = self.cursor.fetchone()
 			if name:
 				return name[0]
@@ -26,61 +33,39 @@ class DatabaseHandler():
 
 	def addDeck(self, name):
 		logging.debug("called DatabaseHandler.addDeck")
-		try: 
-			query = "INSERT INTO decks (name, wins, losses)VALUES('{0}',0,0);".format(name)
-			self.cursor.execute(query)
-			self.db.commit()
-		except sqlite3.Error as err:
-			logging.warning("sqlite3.Error : {0}".format(err))
-	
+		query = "INSERT INTO decks (name) VALUES('"+ name +"');"
+		self.runQuery(query)
+
 	def getDecks(self):
 		logging.debug("called DatabaseHandler.getDecks")
-		try:
-			query = "SELECT * FROM decks;"
-			self.cursor.execute(query)
-			self.db.commit()
-			return self.cursor.fetchall()
-		except sqlite3.Error as err:
-			logging.warning("sqlite3.Error : {0]".format(err))
+		query = "SELECT * FROM decks;"
+		self.runQuery(query)
+		return self.cursor.fetchall()
 
-	def getDeckData(self, id):
-		logging.debug("called DatabaseHandler.getDeckData")
-		try:
-			query = "SELECT name,wins,losses FROM decks WHERE id={0};".format(id)
-			self.cursor.execute(query)
-			self.db.commit()
-			data = self.cursor.fetchone()
-			return data
-		except sqlite3.Error as err:
-			logging.warning("sqlite3.Error : {0}".format(err))
 
-	def updateDeckData(self, id, win):
-		logging.debug("called DatabaseHandler.updateDeckData")
-		currentStats = self.getDeckData(id)
-		if win:
-			toUpdate = 'wins'
-			newValue = currentStats[1] + 1
-		else: 
-			toUpdate = 'losses'
-			newValue = currentStats[2] + 1
-		try:
-			query = "UPDATE decks SET '{0}'={1} WHERE id={2};".format(toUpdate,newValue,id)
-			self.cursor.execute(query)
-			self.db.commit()			
-		except sqlite3.Error as err:
-			logging.warning("sqlite3.Error : {0}".format(err))
+	def updateDeckData(self, deckname, field, value):
+		logging.debug("called DatabaseHandler.updateDeckData: deckname={0}, field={1}, value={2}".format(deckname, field, value))
+		query = "UPDATE decks SET {0}='{1}' WHERE name='{2}';".format(field,value,deckname)
+		self.runQuery(query)
+
+	def addCardToDeck(self, cardid, deckid, numberof):
+		logging.debug("called DatabaseHandler.addCardToDeck with {0},{1},{2}".format(cardid,deckid,numberof))
+		query = "SELECT * FROM cardsInDeck WHERE cardid='{0}' AND deckid={1} AND numberof={2};".format(cardid,deckid,numberof)
+		self.runQuery(query)
+		exist = self.cursor.fetchone()
+		if not exist:
+			query = "INSERT INTO cardsInDeck VALUES ('{0}',{1},{2},0,0,0)".format(cardid,deckid,numberof)
+		else:
+			query = "UPDATE cardsInDeck SET indeck=1 WHERE cardid='{0}' AND deckid={1} AND numberof={2};".format(cardid,deckid,numberof)
+		self.runQuery(query)
+
+	def removeCardFromDeck(self, cardid, deckid, numberof):
+		logging.debug("called DatabaseHandler.removeCardFromDeck with {0},{1},{2}".format(cardid,deckid,numberof))
+		query = "UPDATE cardsInDeck SET indeck=0 WHERE cardid='{0}' AND deckid={1} AND numberof={2};".format(cardid,deckid,numberof)
+		self.runQuery(query)
 
 	def shutdown(self):
 		logging.debug("called DatabaseHandler.shutdown")
 		self.db.close()
 
-if __name__ == '__main__':
-	db = DatabaseHandler()
-	db.addDeck("TestDeck")
-	data = db.getDeckData(1)
-	print(data)
-	db.updateDeckData(1,False)
-	data = db.getDeckData(1)
-	print(data)
-	print(db.getCardName("GAME_005"))
-	db.shutdown()
+
