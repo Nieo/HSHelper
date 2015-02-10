@@ -49,7 +49,7 @@
        <string>Save changes</string>
       </property>
      </widget>
-     <widget class="QListView" name="currentDeckView">
+     <widget class="QTableView" name="currentDeckView">
       <property name="geometry">
        <rect>
         <x>285</x>

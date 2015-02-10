@@ -1,9 +1,10 @@
-#Creates/recreate database and adds all cards and initiates a database for decks 
+#Creates/recreate database and adds all cards and initiates a database for decks
 #THIS MAY DESTROY DATA
 import sqlite3 as lite
 import json
 
-#create table cardsInDeck(cardid TEXT, deckid INT, numberof INT, wins INT, losses INT, indeck INT,FOREIGN KEY(cardid) REFERENCES cards(id),FOREIGN KEY(deckid) REFERENCES decks(id), PRIMARY KEY(cardid, deckid, numberof));
+#create table cardsInDeck(cardid TEXT, deckname TEXT, numberof INT, wins INT DEFAULT 0, losses INT DEFAULT 0, indeck INT DEFAULT 1,FOREIGN KEY(cardid) REFERENCES cards(id),FOREIGN KEY(deckname) REFERENCES decks(name), PRIMARY KEY(cardid, deckname, numberof));
+
 
 def createDatabase(databasename, cardset):
 
@@ -13,7 +14,8 @@ def createDatabase(databasename, cardset):
 	try:
 		db = lite.connect(databasename)
 		cursor = db.cursor()
-		createcardsquery = """CREATE TABLE IF NOT EXISTS cards(
+		cursor.execute("DROP TABLE IF EXISTS cards")
+		createcardsquery = """CREATE TABLE cards(
 			name TEXT,
 			cost INT,
 			type TEXT,
@@ -29,7 +31,7 @@ def createDatabase(databasename, cardset):
 			attack INT,
 			health INT,
 			duability INT,
-			id TEXT,
+			id TEXT PRIMARY KEY,
 			collectible TEXT,
 			elite TEXT,
 			howToGet TEXT,
@@ -38,7 +40,7 @@ def createDatabase(databasename, cardset):
 
 		print("Executing: " + createcardsquery)
 		cursor.execute(createcardsquery)
-		
+
 		for set in cards:
 			for card in cards[set]:
 				cardquery = """INSERT INTO cards VALUES(
@@ -66,7 +68,7 @@ def createDatabase(databasename, cardset):
 					card.get('name').replace('\'', '\'\''),
 					card.get('cost') if type(card.get('cost')) is int else 'NULL',
 					card.get('type'),
-					card.get('rarity'), 
+					card.get('rarity'),
 					card.get('faction'),
 					card.get('race'),
 					card.get('playerClass'),
@@ -84,17 +86,17 @@ def createDatabase(databasename, cardset):
 					card.get('howToGet').replace('\'', '\'\'') if type(card.get('howToGet')) is str else None,
 					card.get('howToGetGold').replace('\'', '\'\'') if type(card.get('howToGetGold')) is str else None
 					)
-				
+
 				#print("Executing: " + cardquery)
 				cursor.execute(cardquery)
 				db.commit()
-		
+
 		cursor.execute("DROP TABLE IF EXISTS decks")
 		createdecksquery = """CREATE TABLE decks(
 			name TEXT PRIMARY KEY,
 			wins INT DEFAULT 0 NOT NULL,
 			losses INT DEFAULT 0 NOT NULL
-			);"""		
+			);"""
 		print("Executing: " + createdecksquery)
 		cursor.execute(createdecksquery)
 
@@ -111,6 +113,6 @@ def createDatabase(databasename, cardset):
 
 if __name__ == '__main__':
 	dbname = "Hearthstone.db"
-	jsonfile = "AllSets.enUS.json"	
+	jsonfile = "AllSets.enUS.json"
 	createDatabase(dbname,jsonfile)
 

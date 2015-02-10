@@ -20,7 +20,7 @@ class Control(QObject):
 		self.mainWindow.deckSelectedSignal.connect(self.deckSelected)
 		self.mainWindow.newDeckSignal.connect(self.newDeck)
 		self.mainWindow.deckNameChangedSignal.connect(self.deckNameChanged)
-
+		self.mainWindow.searchLineEdit.textChanged.connect(self.searchForCards)
 		#Logreader
 		self.filepath = '/Users/Nieo/Library/Logs/Unity/Player.log'
 		self.logreader = LogReader(self.filepath)
@@ -34,7 +34,7 @@ class Control(QObject):
 		#DB
 		self.database = DatabaseHandler()
 
-		self.selectedDeckIndex = None
+		self.selectedDeck = None
 		self.decks = []
 		tmp = self.database.getDecks()
 		for i in tmp:
@@ -76,31 +76,26 @@ class Control(QObject):
 	@pyqtSlot()
 	def newDeck(self):
 		logging.debug("New deck created")
-		self.decks.append(Deck('New Deck'))
+		self.database.addDeck('New Deck')
 
 	@pyqtSlot(str)
 	def deckNameChanged(self, name):
-		oldName = self.decks[self.selectedDeckIndex].name
-		self.decks[self.selectedDeckIndex].name = name
-		logging.debug("deckNameChanged from: " + oldName + ", To: " + name)
+		self.database.changeDeckName(name, self.selectedDeck)
 
 	@pyqtSlot(str)
 	def deckSelected(self, deckname):
-		for i in range(0, len(self.decks)):
-			if self.decks[i].name == deckname:
-				self.selectedDeckIndex = i
-				break
-		logging.debug("deckSelected: " + self.decks[self.selectedDeckIndex].name)
+		self.selectedDeck = deckname
+		logging.debug("deckSelected: " + self.selectedDeck)
 
+	@pyqtSlot(str)
+	def searchForCards(self, query):
+		if(query):
+			cards = self.database.findCards(query)
+			self.mainWindow.showFoundCards(cards)
 
 if __name__ == '__main__':
 	logging.basicConfig(level=logging.DEBUG)
 	a = Control()
-
-
-
-
-
 
 
 

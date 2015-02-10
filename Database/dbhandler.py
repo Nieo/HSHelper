@@ -13,6 +13,7 @@ class DatabaseHandler():
 			logging.warning("sqlite3.Error : {0}".format(err))
 
 	def runQuery(self, query):
+		logging.debug("Running query: " + query)
 		try:
 			self.cursor.execute(query)
 			self.db.commit()
@@ -38,15 +39,15 @@ class DatabaseHandler():
 
 	def getDecks(self):
 		logging.debug("called DatabaseHandler.getDecks")
-		query = "SELECT * FROM decks;"
+		query = "SELECT rowid, * FROM decks;"
 		self.runQuery(query)
 		return self.cursor.fetchall()
 
-
-	def updateDeckData(self, deckname, field, value):
-		logging.debug("called DatabaseHandler.updateDeckData: deckname={0}, field={1}, value={2}".format(deckname, field, value))
-		query = "UPDATE decks SET {0}='{1}' WHERE name='{2}';".format(field,value,deckname)
+	def changeDeckName(self, oldName, newName):
+		logging.debug("called DatabaseHandler.changeDeckName from {0} to {1}".format(oldName, newName))
+		query = "UPDATE decks SET name='{0}' WHERE name='{1}'".format(oldName, newName)
 		self.runQuery(query)
+
 
 	def addCardToDeck(self, cardid, deckid, numberof):
 		logging.debug("called DatabaseHandler.addCardToDeck with {0},{1},{2}".format(cardid,deckid,numberof))
@@ -63,6 +64,13 @@ class DatabaseHandler():
 		logging.debug("called DatabaseHandler.removeCardFromDeck with {0},{1},{2}".format(cardid,deckid,numberof))
 		query = "UPDATE cardsInDeck SET indeck=0 WHERE cardid='{0}' AND deckid={1} AND numberof={2};".format(cardid,deckid,numberof)
 		self.runQuery(query)
+
+	def findCards(self, searchTerm):
+		logging.debug("called DatabaseHandler.getCardByCost with " + searchTerm)
+		query = "SELECT id, name FROM cards WHERE (name LIKE '%{0}%' OR cost='{0}' )AND (type='Minion' OR type='Spell');".format(searchTerm)
+		self.runQuery(query)
+		return self.cursor.fetchall()
+
 
 	def shutdown(self):
 		logging.debug("called DatabaseHandler.shutdown")
