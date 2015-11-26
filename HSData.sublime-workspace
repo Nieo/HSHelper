@@ -4,6 +4,146 @@
 		"selected_items":
 		[
 			[
+				"Da",
+				"Database	module"
+			],
+			[
+				"D",
+				"DatabaseHandler	import"
+			],
+			[
+				"hand",
+				"handleLogUpdate"
+			],
+			[
+				"selc",
+				"selectedDeck	statement"
+			],
+			[
+				"QSqlR",
+				"QSqlRelationalTableModel	class"
+			],
+			[
+				"deckna",
+				"deckname	param"
+			],
+			[
+				"sel",
+				"selectedDeck	statement"
+			],
+			[
+				"QS",
+				"QStandardItemModel	class"
+			],
+			[
+				"qu",
+				"query	param"
+			],
+			[
+				"app",
+				"appendRow	function"
+			],
+			[
+				"fetch",
+				"fetchall"
+			],
+			[
+				"shosw",
+				"showFoundCards	function"
+			],
+			[
+				"man",
+				"mainWindow	statement"
+			],
+			[
+				"fetc",
+				"fetchall"
+			],
+			[
+				"get",
+				"getCardByCost"
+			],
+			[
+				"py",
+				"pyqtSlot	function"
+			],
+			[
+				"QItem",
+				"QItemSelectionModel	class"
+			],
+			[
+				"selec",
+				"selectionModel"
+			],
+			[
+				"se",
+				"selectionModel"
+			],
+			[
+				"deck",
+				"deckSelected	function"
+			],
+			[
+				"newD",
+				"newDeckSignal	statement"
+			],
+			[
+				"dec",
+				"deckNameChangedSignal	statement"
+			],
+			[
+				"index",
+				"indexFromItem	function"
+			],
+			[
+				"deckV",
+				"allDecksView"
+			],
+			[
+				"Q",
+				"QStandardItem	class"
+			],
+			[
+				"main",
+				"mainWindow	statement"
+			],
+			[
+				"pyq",
+				"pyqtSlot"
+			],
+			[
+				"f",
+				"from"
+			],
+			[
+				"add",
+				"addCardToDeck"
+			],
+			[
+				"ext",
+				"execute"
+			],
+			[
+				"cards",
+				"cardsInDeck"
+			],
+			[
+				"cardi",
+				"cardid"
+			],
+			[
+				"ex",
+				"execute"
+			],
+			[
+				"pla",
+				"playerName"
+			],
+			[
+				"UI",
+				"UI_MainWindow"
+			],
+			[
 				"lo",
 				"logging"
 			],
@@ -28,14 +168,6 @@
 				"getDeckData"
 			],
 			[
-				"py",
-				"pyqtSignal"
-			],
-			[
-				"Q",
-				"QObject"
-			],
-			[
 				"ru",
 				"running"
 			],
@@ -52,10 +184,6 @@
 				"Logreader"
 			],
 			[
-				"se",
-				"self"
-			],
-			[
 				"nam",
 				"nameItem"
 			],
@@ -64,20 +192,12 @@
 				"callback"
 			],
 			[
-				"add",
-				"addLabel"
-			],
-			[
 				"new",
 				"newWidget"
 			],
 			[
 				"pa",
 				"pack_propagate"
-			],
-			[
-				"get",
-				"getLogEntry"
 			],
 			[
 				"co",
@@ -114,14 +234,6 @@
 			[
 				"stat",
 				"statFrames"
-			],
-			[
-				"deck",
-				"deckdata"
-			],
-			[
-				"ex",
-				"except"
 			],
 			[
 				"Sta",
@@ -162,10 +274,6 @@
 			[
 				"a",
 				"action"
-			],
-			[
-				"qu",
-				"queue"
 			],
 			[
 				"logrea",
@@ -336,10 +444,21 @@
 	"buffers":
 	[
 		{
+			"contents": "import sys\nimport logging\nimport os\nfrom Database import dbhandler\nfrom logreader import LogReader\n\n\ndef cls():\n    os.system('cls' if os.name == 'nt' else 'clear')\n\n\nclass Control():\n\n    \"\"\"Main controler\"\"\"\n\n    def __init__(self):\n        # Logreader\n        self.filepath = '/Users/Nieo/Library/Logs/Unity/Player.log'\n        self.logreader = LogReader(self.filepath, self.handleLogUpdate)\n        self.database = dbhandler.DatabaseHandler()\n        self.playerName = 'Nieo'\n        self.logreader.start()\n\n        sys.exit(self.app.exec_())\n\n    def handleLogUpdate(self, type, data):\n        if type == \"zone\":\n            if data[2] == \"OPPOSING HAND\":\n                print(self.database.getCardName(data[1]))\n            else:\n                pass\n                # logging.debug(data)\n        elif type == \"playState\":\n            logging.debug(data)\n            if data[1] == 'PLAYING' and data[0] == self.playerName:\n                logging.info(\"New game starting\")\n\n            elif data[1] == 'WON':\n                if data[0] == self.playerName:\n                    print(\"------Victory------\")\n                    cls()\n                    logging.info(\"You have won\")\n                else:\n                    print(\"-----Defeat-----\")\n                    cls()\n                    logging.info(\"You have lost\")\n\n\nif __name__ == '__main__':\n    logging.basicConfig(level=logging.CRITICAL)\n    a = Control()\n",
 			"file": "control.py",
+			"file_size": 1426,
+			"file_write_time": 130856798190000000,
 			"settings":
 			{
-				"buffer_size": 1730,
+				"buffer_size": 1426,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Database/dbhandler.py",
+			"settings":
+			{
+				"buffer_size": 3391,
 				"line_ending": "Unix"
 			}
 		},
@@ -347,33 +466,46 @@
 			"file": "logreader.py",
 			"settings":
 			{
-				"buffer_size": 969,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "game.py",
-			"settings":
-			{
-				"buffer_size": 770,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "overlay.py",
-			"settings":
-			{
-				"buffer_size": 1094,
+				"buffer_size": 907,
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 67.0,
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"packa",
 				"Package Control: Install Package"
@@ -404,16 +536,35 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Nieo/Git/HSData",
-		"/Users/Nieo/Git/HSData/Database"
+		"/Users/Nieo/Git/HSData"
 	],
 	"file_history":
 	[
-		"/Users/Nieo/Git/HSData/Database/dbhandler.py",
-		"/Users/Nieo/Git/HSData/overlay.py",
-		"/Users/Nieo/Git/HSData/logreader.py",
+		"/Users/Nieo/Git/HSData/deck.py",
+		"/Users/Nieo/Git/HSData/__init__.py",
+		"/Users/Nieo/Git/HSData/Database/__init__.py",
 		"/Users/Nieo/Git/HSData/game.py",
+		"/Users/Nieo/Git/HSData/Database/dbhandler.py",
 		"/Users/Nieo/Git/HSData/mainwindow.py",
+		"/Users/Nieo/Documents/python/web/mysite/manage.py",
+		"/Users/Nieo/Git/HSData/HSData.sublime-project",
+		"/Users/Nieo/Git/HSData/Database/initDB.py",
+		"/Users/Nieo/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Nieo/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/Nieo/Git/HSData/UI/mainWindow.py",
+		"/Users/Nieo/Git/HSData/logreaderOLD.py",
+		"/Users/Nieo/Library/Application Support/Sublime Text 3/Packages/Anaconda/README.md",
+		"/Users/Nieo/Git/HSData/window.py",
+		"/Users/Nieo/Git/HSData/Player.log",
+		"/Users/Nieo/Git/HSData/Database/AllSets.enUS.json",
+		"/Users/Nieo/Library/Application Support/Sublime Text 3/Packages/User/Python.sublime-build",
+		"/Users/Nieo/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/Users/Nieo/Git/HSData/HSData.sublime-workspace",
+		"/Users/Nieo/Library/Application Support/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/Users/Nieo/Git/HSData/logreader.py",
+		"/Users/Nieo/Git/HSData/control.py",
+		"/Users/Nieo/Git/HSData/.gitignore",
+		"/Users/Nieo/Git/HSData/overlay.py",
 		"/Users/Nieo/Git/HSData/drawItem.py",
 		"/Users/Nieo/Git/HSData/UI/overlayDialog.py",
 		"/Users/Nieo/Git/HSData/UI/drawItem.py",
@@ -423,12 +574,50 @@
 		"/Users/Nieo/Git/HSData/drawlist.py",
 		"/Users/Nieo/Git/HSData/OpponentCardList.py",
 		"/Users/Nieo/Documents/Qt/Learning/Form.py",
-		"/Users/Nieo/Git/HSData/control.py",
-		"/Users/Nieo/Git/HSData/window.py",
 		"/Users/Nieo/Git/HSData/log.config",
 		"/Users/Nieo/Git/HSData/dbhandler.py",
 		"/Users/Nieo/Git/HSData/initDB.py",
-		"/Users/Nieo/Git/HSData/config.txt"
+		"/Users/Nieo/Git/HSData/config.txt",
+		"/Users/Nieo/Documents/python/Logging/TestLog/readableLog.txt",
+		"/Users/Nieo/Documents/python/Logging/LogParser.py",
+		"/Users/Nieo/Documents/python/Logging/Data/Player1.log",
+		"/Users/Nieo/Documents/python/Logging/GameTest.py",
+		"/Users/Nieo/Documents/python/Logging/guitest.py",
+		"/Users/Nieo/Documents/python/Logging/overlay.py",
+		"/Users/Nieo/Documents/python/Logging/dbhandler.py",
+		"/Users/Nieo/Documents/python/Logging/JsonTest.py",
+		"/Users/Nieo/Documents/python/Logging/game.py",
+		"/Users/Nieo/Documents/python/Logging/regex",
+		"/Users/Nieo/Documents/python/Logging/card.py",
+		"/Users/Nieo/Documents/python/Logging/deck.py",
+		"/Users/Nieo/Documents/python/Logging/Decklist.py",
+		"/Users/Nieo/Documents/python/helloworld.py",
+		"/Users/Nieo/Downloads/David/Labb 4/Uppgift 3/interupt.s12",
+		"/Users/Nieo/Documents/python/PyhtonChallenge/PyChallenge7.py",
+		"/Users/Nieo/Documents/python/PyhtonChallenge/Data4.txt",
+		"/Users/Nieo/Documents/python/PyhtonChallenge/PyChallenge6.py",
+		"/Users/Nieo/Documents/python/PyhtonChallenge/banner.p.webarchive",
+		"/Users/Nieo/Documents/python/PyhtonChallenge/Data6.p",
+		"/Users/Nieo/Documents/python/PyhtonChallenge/PyChallenge4.py",
+		"/Users/Nieo/Documents/python/PyhtonChallenge/PyChallenge5.py",
+		"/Users/Nieo/Documents/python/PyhtonChallenge/PyChallenge3.py",
+		"/Users/Nieo/Documents/python/PyhtonChallenge/PyChallenge2.py",
+		"/Users/Nieo/Documents/python/PyhtonChallenge/Data3.txt",
+		"/Users/Nieo/Git/furiousbalcony/www/index.html",
+		"/Users/Nieo/Git/furiousbalcony/www/templates/tab-settings.html",
+		"/Users/Nieo/Git/furiousbalcony/www/js/controllers.js",
+		"/Users/Nieo/Git/furiousbalcony/www/js/app.js",
+		"/Users/Nieo/Git/furiousbalcony/www/templates/tabs.html",
+		"/Users/Nieo/Git/furiousbalcony/www/templates/game-detail.html",
+		"/Users/Nieo/Git/furiousbalcony/www/templates/tab-dash.html",
+		"/Users/Nieo/Downloads/David/Subroutines.s12",
+		"/Users/Nieo/Downloads/reflex-2.10.0/reflex.conf",
+		"/Users/Nieo/Git/furiousbalcony/www/js/services.js",
+		"/Users/Nieo/Git/furiousbalcony/www/templates/tab-games.html",
+		"/Users/Nieo/Git/furiousbalcony/www/templates/tab-friends.html",
+		"/Users/Nieo/Git/furiousbalcony/www/css/style.css",
+		"/Users/Nieo/Git/furiousbalcony/platforms/ios/www/js/services.js",
+		"/Users/Nieo/Library/Application Support/Sublime Text 3/Packages/User/sftp_servers/styx sftp"
 	],
 	"find":
 	{
@@ -446,6 +635,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"    ",
+			"selectedDeckIndex",
+			"selectedDeck",
+			"cardsInDeck",
 			"ex_537",
 			"item",
 			"fd",
@@ -476,25 +669,30 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1730,
+						"buffer_size": 1426,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								497,
-								497
+								980,
+								980
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
+							"auto_complete": false,
+							"color_scheme": "Packages/Theme - Flatland/Flatland Monokai.tmTheme",
 							"incomplete_sync": null,
-							"syntax": "Packages/Python/Python.tmLanguage"
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 182.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -502,28 +700,30 @@
 				},
 				{
 					"buffer": 1,
-					"file": "logreader.py",
+					"file": "Database/dbhandler.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 969,
+						"buffer_size": 3391,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								749,
-								749
+								317,
+								317
 							]
 						],
 						"settings":
 						{
+							"auto_complete": false,
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -534,60 +734,30 @@
 				},
 				{
 					"buffer": 2,
-					"file": "game.py",
+					"file": "logreader.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 770,
+						"buffer_size": 907,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								702,
-								702
+								808,
+								808
 							]
 						],
 						"settings":
 						{
+							"auto_complete": false,
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "overlay.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1094,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								369,
-								369
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -632,7 +802,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 155.0
+		"height": 182.0
 	},
 	"output.find_results":
 	{
@@ -642,6 +812,7 @@
 	{
 		"height": 0.0
 	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
 	"project": "HSData.sublime-project",
 	"replace":
 	{
@@ -651,6 +822,7 @@
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -663,6 +835,7 @@
 	"select_project":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -671,6 +844,7 @@
 	"select_symbol":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
