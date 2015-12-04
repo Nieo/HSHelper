@@ -1,0 +1,15 @@
+2,LOEA10_3,Murloc Tinyfin
+2,CS2_168,Murloc Raider
+2,CS2_172,Bloodfen Raptor
+2,GVG_064,Puddlestomper
+2,CS2_120,River Crocolisk
+2,AT_092,Ice Rager
+2,CS2_118,Magma Rager
+2,GVG_044,Spider Tank
+2,CS2_182,Chillwind Yeti
+2,GVG_071,Lost Tallstrider
+2,CS2_119,Oasis Snapjaw
+2,AT_101,Pit Fighter
+2,GVG_070,Salty Dog
+2,CS2_200,Boulderfist Ogre
+2,CS2_186,War Golem
