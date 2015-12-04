@@ -8,7 +8,7 @@ import json
 
 def createDatabase(databasename, cardset):
 
-    cardfile = open(cardset)
+    cardfile = open(cardset, encoding="utf-8")
     cards = json.loads(cardfile.read())
 
     try:

@@ -1,6 +1,6 @@
 class Hand(object):
     """docstring for Hand"""
-    def __init__(self, arg):
+    def __init__(self):
         self.cards = []
         self.maxMana = 0
         self.currentMana = 0
