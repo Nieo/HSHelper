@@ -1,0 +1,926 @@
+['LOEA10_3', 'LOEA10_3', 'CS2_168', 'CS2_168', 'CS2_172', 'CS2_172', 'GVG_064', 'GVG_064', 'CS2_120', 'CS2_120', 'AT_092', 'AT_092', 'CS2_118', 'CS2_118', 'GVG_044', 'GVG_044', 'CS2_182', 'CS2_182', 'GVG_071', 'GVG_071', 'CS2_119', 'CS2_119', 'AT_101', 'AT_101', 'GVG_070', 'GVG_070', 'CS2_200', 'CS2_200', 'CS2_186', 'CS2_186']
+Called start
+Starting new game
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 0/0	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 0/1	Enemy hand/deck size 0/0
+            
+Adding card to hand Rockbiter Weapon
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 1/1	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 1/2	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 1/3	Enemy hand/deck size 0/0
+            
+Adding card to hand Totem Golem
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/3	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/4	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/5	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/6	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/7	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/8	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/9	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/10	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/11	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/12	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/13	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/14	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/15	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/16	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 2/17	Enemy hand/deck size 0/0
+            
+Adding card to hand Azure Drake
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 3/17	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 3/18	Enemy hand/deck size 0/0
+            
+Adding card to hand Al'Akir the Windlord
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/18	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/19	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/20	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/21	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/22	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/23	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/24	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/25	Enemy hand/deck size 0/0
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 0/0
+            
+Adding card to opponents deck ('34', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 0/1
+            
+Adding card to opponents deck ('35', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 0/2
+            
+Adding card to opponents deck ('36', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 0/3
+            
+Adding card to opponents deck ('37', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 0/4
+            
+Adding card to opponents deck ('38', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 0/5
+            
+Adding card to opponents hand
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/5
+            
+Adding card to opponents deck ('40', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/6
+            
+Adding card to opponents deck ('41', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/7
+            
+Adding card to opponents deck ('42', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/8
+            
+Adding card to opponents deck ('43', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/9
+            
+Adding card to opponents deck ('44', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/10
+            
+Adding card to opponents deck ('45', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/11
+            
+Adding card to opponents deck ('46', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/12
+            
+Adding card to opponents deck ('47', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/13
+            
+Adding card to opponents deck ('48', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/14
+            
+Adding card to opponents deck ('49', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/15
+            
+Adding card to opponents deck ('50', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/16
+            
+Adding card to opponents deck ('51', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/17
+            
+Adding card to opponents deck ('52', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/18
+            
+Adding card to opponents deck ('53', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/19
+            
+Adding card to opponents deck ('54', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/20
+            
+Adding card to opponents deck ('55', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 1/21
+            
+Adding card to opponents hand
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 2/21
+            
+Adding card to opponents hand
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 3/21
+            
+Adding card to opponents deck ('58', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 3/22
+            
+Adding card to opponents deck ('59', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 3/23
+            
+Adding card to opponents deck ('60', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 3/24
+            
+Adding card to opponents deck ('61', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 3/25
+            
+Adding card to opponents deck ('62', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 3/26
+            
+Adding card to opponents deck ('63', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 4/26	Enemy hand/deck size 3/27
+            
+Cant handle yet.. ('64', 'HERO_02', '', 'FRIENDLY PLAY (Hero)')
+Cant handle yet.. ('65', 'CS2_049', '', 'FRIENDLY PLAY (Hero Power)')
+Cant handle yet.. ('66', 'HERO_01', '', 'OPPOSING PLAY (Hero)')
+Cant handle yet.. ('67', 'CS2_102', '', 'OPPOSING PLAY (Hero Power)')
+Adding card to hand The Coin
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 5/26	Enemy hand/deck size 3/27
+            
+OPPOSING draw
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 5/26	Enemy hand/deck size 4/26
+            
+OPPOSING muligan
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 5/26	Enemy hand/deck size 3/27
+            
+Draw card Lightning Storm
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 6/26	Enemy hand/deck size 3/27
+            
+Muligan Al'Akir the Windlord
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 5/27	Enemy hand/deck size 3/27
+            
+Draw card Hex
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 6/27	Enemy hand/deck size 3/27
+            
+Muligan Azure Drake
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 5/28	Enemy hand/deck size 3/27
+            
+OPPOSING draw
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 5/28	Enemy hand/deck size 4/26
+            
+OPPOSING played minion Leper Gnome
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 5/28	Enemy hand/deck size 3/26
+            
+Draw card Thunder Bluff Valiant
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 6/28	Enemy hand/deck size 3/26
+            
+Cant handle yet.. ('68', 'GAME_005', 'FRIENDLY HAND', '')
+Friendly minion played Totem Golem
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 6/28	Enemy hand/deck size 3/26
+            
+Cant handle yet.. ('68', 'GAME_005', '', 'FRIENDLY GRAVEYARD')
+OPPOSING draw
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 6/28	Enemy hand/deck size 4/25
+            
+OPPOSING played minion Lance Carrier
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 6/28	Enemy hand/deck size 3/25
+            
+Cant handle yet.. ('69', 'AT_084e', '', '')
+Draw card Tuskarr Totemic
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 7/28	Enemy hand/deck size 3/25
+            
+Cant handle yet.. ('5', 'CS2_045', 'FRIENDLY HAND', '')
+Cant handle yet.. ('5', 'CS2_045', '', 'FRIENDLY GRAVEYARD')
+OPPOSING minion died Leper Gnome
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 7/28	Enemy hand/deck size 3/25
+            
+OPPOSING minion died Lance Carrier
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 7/28	Enemy hand/deck size 3/25
+            
+OPPOSING draw
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 7/28	Enemy hand/deck size 4/24
+            
+Draw card Thunder Bluff Valiant
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 8/28	Enemy hand/deck size 4/24
+            
+Friendly minion played Tuskarr Totemic
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 8/28	Enemy hand/deck size 4/24
+            
+Cant handle yet.. ('71', 'EX1_565', '', 'FRIENDLY PLAY')
+OPPOSING draw
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 8/28	Enemy hand/deck size 5/23
+            
+Cant handle yet.. ('63', 'EX1_400', 'OPPOSING HAND', '')
+Cant handle yet.. ('63', 'EX1_400', '', 'OPPOSING GRAVEYARD')
+OPPOSING played minion Cruel Taskmaster
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 8/28	Enemy hand/deck size 4/23
+            
+Cant handle yet.. ('73', 'EX1_603e', '', '')
+Friendly minion died Tuskarr Totemic
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 8/28	Enemy hand/deck size 4/23
+            
+Cant handle yet.. ('41', 'CS2_108', 'OPPOSING HAND', '')
+Cant handle yet.. ('41', 'CS2_108', '', 'OPPOSING GRAVEYARD')
+Friendly minion died Flametongue Totem
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 8/28	Enemy hand/deck size 4/23
+            
+Draw card Feral Spirit
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 9/28	Enemy hand/deck size 4/23
+            
+Cant handle yet.. ('18', 'EX1_248', 'FRIENDLY HAND', '')
+Cant handle yet.. ('75', 'EX1_tk11', '', 'FRIENDLY PLAY')
+Cant handle yet.. ('76', 'EX1_tk11', '', 'FRIENDLY PLAY')
+Cant handle yet.. ('18', 'EX1_248', '', 'FRIENDLY GRAVEYARD')
+OPPOSING draw
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 9/28	Enemy hand/deck size 5/22
+            
+Cant handle yet.. ('46', 'CS2_106', 'OPPOSING HAND', 'OPPOSING PLAY (Weapon)')
+Friendly minion died Spirit Wolf
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 9/28	Enemy hand/deck size 5/22
+            
+Draw card Flametongue Totem
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 10/28	Enemy hand/deck size 5/22
+            
+OPPOSING minion died Cruel Taskmaster
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 10/28	Enemy hand/deck size 5/22
+            
+Cant handle yet.. ('77', 'CS2_051', '', 'FRIENDLY PLAY')
+OPPOSING draw
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 10/28	Enemy hand/deck size 6/21
+            
+OPPOSING played minion Justicar Trueheart
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 10/28	Enemy hand/deck size 5/21
+            
+Cant handle yet.. ('78', 'AT_132_WARRIOR', '', 'OPPOSING PLAY (Hero Power)')
+Cant handle yet.. ('67', 'CS2_102', 'OPPOSING PLAY (Hero Power)', '')
+Friendly minion died Spirit Wolf
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 10/28	Enemy hand/deck size 5/21
+            
+Cant handle yet.. ('46', 'CS2_106', 'OPPOSING PLAY (Weapon)', 'OPPOSING GRAVEYARD')
+Draw card Earth Shock
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 11/28	Enemy hand/deck size 5/21
+            
+Cant handle yet.. ('79', 'CS2_052', '', 'FRIENDLY PLAY')
+Friendly minion died Totem Golem
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 11/28	Enemy hand/deck size 5/21
+            
+OPPOSING minion died Justicar Trueheart
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 11/28	Enemy hand/deck size 5/21
+            
+Friendly minion played Flametongue Totem
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 11/28	Enemy hand/deck size 5/21
+            
+OPPOSING draw
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 11/28	Enemy hand/deck size 6/20
+            
+OPPOSING played minion Fierce Monkey
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 11/28	Enemy hand/deck size 5/20
+            
+Cant handle yet.. ('58', 'AT_068', 'OPPOSING HAND', '')
+Cant handle yet.. ('82', 'AT_068e', '', '')
+Cant handle yet.. ('58', 'AT_068', '', 'OPPOSING GRAVEYARD')
+Draw card Fire Elemental
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 12/28	Enemy hand/deck size 5/20
+            
+Cant handle yet.. ('24', 'EX1_245', 'FRIENDLY HAND', '')
+Cant handle yet.. ('24', 'EX1_245', '', 'FRIENDLY GRAVEYARD')
+Friendly minion played Fire Elemental
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 12/28	Enemy hand/deck size 5/20
+            
+OPPOSING minion died Fierce Monkey
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 12/28	Enemy hand/deck size 5/20
+            
+OPPOSING draw
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 12/28	Enemy hand/deck size 6/19
+            
+OPPOSING played minion Piloted Shredder
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 12/28	Enemy hand/deck size 5/19
+            
+Draw card Tuskarr Totemic
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 13/28	Enemy hand/deck size 5/19
+            
+Friendly minion played Thunder Bluff Valiant
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 13/28	Enemy hand/deck size 5/19
+            
+Cant handle yet.. ('83', 'NEW1_009', '', 'FRIENDLY PLAY')
+OPPOSING draw
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 13/28	Enemy hand/deck size 6/18
+            
+OPPOSING played minion Piloted Shredder
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 13/28	Enemy hand/deck size 5/18
+            
+Friendly minion died Stoneclaw Totem
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 13/28	Enemy hand/deck size 5/18
+            
+OPPOSING minion died Piloted Shredder
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 13/28	Enemy hand/deck size 5/18
+            
+Cant handle yet.. ('89', 'AT_071', '', 'OPPOSING PLAY')
+Draw card Piloted Shredder
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 14/28	Enemy hand/deck size 5/18
+            
+Cant handle yet.. ('90', 'CS2_051', '', 'FRIENDLY PLAY')
+Nieo  won
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 14/28	Enemy hand/deck size 5/18
+            
+Cant handle yet.. ('66', 'HERO_01', 'OPPOSING PLAY (Hero)', 'OPPOSING GRAVEYARD')
+Nieo  won
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 14/28	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 14/29	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 14/30	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 14/31	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 14/32	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 14/33	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 14/34	Enemy hand/deck size 5/18
+            
+Adding card to hand Haunted Creeper
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 15/34	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 15/35	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 15/36	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 15/37	Enemy hand/deck size 5/18
+            
+Adding card to hand Fire Elemental
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 16/37	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 16/38	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 16/39	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 16/40	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 16/41	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 16/42	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 16/43	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 16/44	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 16/45	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 16/46	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 16/47	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 16/48	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 16/49	Enemy hand/deck size 5/18
+            
+Adding card to hand Lightning Storm
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/49	Enemy hand/deck size 5/18
+            
+Adding card to hand Thunder Bluff Valiant
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/49	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/50	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/51	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/52	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/53	Enemy hand/deck size 5/18
+            
+Putting card in deck
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 5/18
+            
+Adding card to opponents deck ('34', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 5/19
+            
+Adding card to opponents deck ('35', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 5/20
+            
+Adding card to opponents deck ('36', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 5/21
+            
+Adding card to opponents deck ('37', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 5/22
+            
+Adding card to opponents deck ('38', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 5/23
+            
+Adding card to opponents deck ('39', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 5/24
+            
+Adding card to opponents deck ('40', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 5/25
+            
+Adding card to opponents deck ('41', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 5/26
+            
+Adding card to opponents hand
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/26
+            
+Adding card to opponents deck ('43', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/27
+            
+Adding card to opponents deck ('44', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/28
+            
+Adding card to opponents deck ('45', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/29
+            
+Adding card to opponents deck ('46', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/30
+            
+Adding card to opponents deck ('47', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/31
+            
+Adding card to opponents deck ('48', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/32
+            
+Adding card to opponents deck ('49', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/33
+            
+Adding card to opponents deck ('50', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/34
+            
+Adding card to opponents deck ('51', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/35
+            
+Adding card to opponents deck ('52', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/36
+            
+Adding card to opponents deck ('53', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/37
+            
+Adding card to opponents deck ('54', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/38
+            
+Adding card to opponents deck ('55', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/39
+            
+Adding card to opponents deck ('56', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/40
+            
+Adding card to opponents deck ('57', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 6/41
+            
+Adding card to opponents hand
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 7/41
+            
+Adding card to opponents deck ('59', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 7/42
+            
+Adding card to opponents hand
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 8/42
+            
+Adding card to opponents deck ('61', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 8/43
+            
+Adding card to opponents deck ('62', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 8/44
+            
+Adding card to opponents deck ('63', '', '', 'OPPOSING DECK')
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 8/45
+            
+Cant handle yet.. ('64', 'HERO_02', '', 'FRIENDLY PLAY (Hero)')
+Cant handle yet.. ('65', 'CS2_049', '', 'FRIENDLY PLAY (Hero Power)')
+Cant handle yet.. ('66', 'HERO_04', '', 'OPPOSING PLAY (Hero)')
+Cant handle yet.. ('67', 'CS2_101', '', 'OPPOSING PLAY (Hero Power)')
+Adding card to hand The Coin
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 17/54	Enemy hand/deck size 8/45
+            
+Starting new game
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 0/0	Enemy hand/deck size 0/0
+            
+OPPOSING draw
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 0/0	Enemy hand/deck size 1/-1
+            
+OPPOSING muligan
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 0/0	Enemy hand/deck size 0/0
+            
+Draw card Rockbiter Weapon
+Current state
+        My health/armor 30/0	Enemy health/armor 30/0
+        My hand/deck size 1/0	Enemy hand/deck size 0/0
+            
+Muligan Lightning Storm
