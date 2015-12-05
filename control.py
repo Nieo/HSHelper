@@ -25,6 +25,9 @@ class Control():
 
     def handleLogUpdate(self, type, data):
         if type == "zone":
+            print("--")
+            for d in data:
+                print("data: ", d)
             if data[2] == "OPPOSING HAND":
                 print(self.database.getCardName(data[1]))
             else:
@@ -38,11 +41,9 @@ class Control():
             elif data[1] == 'WON':
                 if data[0] == self.playerName:
                     print("------Victory------")
-                    cls()
                     logging.info("You have won")
                 else:
                     print("-----Defeat-----")
-                    cls()
                     logging.info("You have lost")
 
 
